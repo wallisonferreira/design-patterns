@@ -1,6 +1,6 @@
 // Decorator (ou Wrapper) é um padrão de que visa substituir a heraça pela
 // Agregação ou Composição. Dessa forma, podemos fazer mais de uma ação, se
-// necessário, para uma instrução passada.
+// necessário, para uma instrução informada.
 
 class Coffee {
     cost() {
@@ -8,7 +8,7 @@ class Coffee {
     }
 }
 
-// Decorator 1: Adiciona leite
+// Adiciona leite
 class MilkDecorator {
     constructor(coffee) {
         this.coffee = coffee;
@@ -19,6 +19,7 @@ class MilkDecorator {
     }
 }
 
+// Adiciona chocolate
 class ChocolateDecorator {
     constructor(coffee) {
         this.coffee = coffee;
@@ -31,8 +32,11 @@ class ChocolateDecorator {
 
 let myCoffee = new Coffee();
 
+console.log('Antes', myCoffee.cost());
+
 myCoffee = new MilkDecorator(myCoffee);
 myCoffee = new ChocolateDecorator(myCoffee);
 
-console.log(myCoffee.cost());
+console.log('Depois', myCoffee.cost());
+console.log(myCoffee);
 
