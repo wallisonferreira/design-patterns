@@ -6,4 +6,4 @@
 node arquivo.js
 ```
 
-from: https://twitter.com/samsantosb/status/1716842779119067170/photo/1
+Exemplo de Observer: https://twitter.com/samsantosb/status/1716842779119067170/photo/1
