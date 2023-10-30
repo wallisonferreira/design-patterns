@@ -2,7 +2,7 @@
 
 namespace DesignPatterns\Decorator;
 
-use DesignPatterns\Decorator\Decorator;
+// use DesignPatterns\Decorator\Decorator;
 
 class ConcreteDecoratorA extends Decorator
 {

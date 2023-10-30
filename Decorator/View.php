@@ -12,13 +12,14 @@ class View
     public function __construct()
     {
         $simple = new ConcreteComponent();
-        echo "Client: I've got a simple component:\n";
+        echo "Client: I've got a simple component: <br/>";
+        PHP_EOL;
         $this->clientView($simple);
         echo "\n\n";
 
         $decorator1 = new ConcreteDecoratorA($simple);
         $decorator2 = new ConcreteDecoratorB($decorator1);
-        echo "Client: Now I've got a decorated component:\n";
+        echo "Client: Now I've got a decorated component: <br/>";
         $this->clientView($decorator2);
     }
 
